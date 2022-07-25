@@ -1,0 +1,70 @@
+/* body{overflow-x: hidden;} */
+/* 작업완료하고 브라우저에 따른 혹시 모를
+가로스크롤이 생기지 않게 마지막에 스타일 주기 */
+
+li {list-style: none;}
+#gnb a {text-decoration: none; color: #000;}
+
+#hd > div {border-bottom: 1px solid #000;}
+
+.fa-xmark {display: none;}
+.fa-bars {display: block;}
+
+.open > .fa-xmark {display: block;}
+.open > .fa-bars {display: none;}
+
+.open + #gnb {
+    display: flex !important; 
+    position: fixed; 
+    background-color: #e6e6e6;
+    left: 0;
+    right: 0;
+    top:80px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    line-height: 2;
+}
+
+.open + #gnb:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 30px; height: 30px;
+    background-color: #e6e6e6;
+    left: 0; right: 0; top: -6%;
+    margin: 0 auto;
+    transform: rotate(-45deg);
+}
+
+#main > div {
+    height: 100vh;
+}
+
+#gnb a.act {color: #f30c51;}
+
+
+/* portfolio */
+#portfolio .swiper-slide {
+    max-height: 700px; /*WEB버전 배너 이미지의 실제 높이를 최대 높이로 넣어주기*/
+    height: 100vh; /*view height 화면의 너비만큼t*/
+}
+
+#portfolio .sir {
+    background-image: url(/portfolio/img/by_seo_img.png);
+}
+
+
+/* me */  /* 무임승차 ..? */
+#me h2 {
+    background-color: #fff; 
+    transition-duration: 0.5s;
+    transition-delay: 1s;
+    color: #000;
+}
+
+#me .aos-animate h2 {
+    background-color: #f30c51 !important;
+    color: #fff !important;
+}
