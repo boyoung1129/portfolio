@@ -25,6 +25,7 @@
 
 <!-- 사용자 개선을 위한 아이콘폰트사용  -->
 <script src="https://kit.fontawesome.com/a108335823.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 
 <!-- 빠른 반응형 환경구축을 위한 부트스트랩 그리드시스템 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -63,7 +64,7 @@
                         <span class="sr-only">전체메뉴 닫기</span>
                     </i>
                 </button>
-                <ul id="gnb" class="d-md-flex d-none">
+                <ul id="gnb" class="d-md-flex d-none navisection'">
                     <!-- before 들어가는 자리-->
                     <li class="pl-md-3"><a href='#portfolio'>포트폴리오</a></li>
                     <li class="pl-md-3"><a href='#me'>나의능력</a></li>
@@ -190,6 +191,109 @@
             </div>
 
         </section>
+
+        <section id="contact" class="bg-light py-2 py-md-4 py-lg-5">
+            <div class="container px-lg-5">
+                <h3 class="text-center mb-0 text-primary">연락</h3>
+                <form action="https://www.naver.com" method="get" id="fm" name="fm">
+                    <div class="col-md-6 m-auto">
+                        <p class="d-flex justify-content-between align-items-center border-bottom border-dark">
+                        <strong>기본정보</strong>
+                        <span>필수 입력사항</span>
+                        </p>
+                        <ul class="pl-0">
+                            <li class="py-2 py-lg-3 d-md-flex">
+                                <strong class="col-md-3 pl-0 req">타이틀</strong>
+                                <div class="col pr-0"> <input type="text" name="subject" class="w-100 border border-secondary" required placeholder="입력주의사항"></div>
+                                <span class="d-none text-right">아이디를 입력해주세요</span>
+                            </li>
+                            <li class="py-2 py-lg-3 d-md-flex">
+                                <strong class="col-md-3 pl-0">타이틀</strong>
+                                <div class="col"> <input type="text"></div>
+                            </li>
+                            <li class="py-2 py-lg-3 d-md-flex">
+                                <strong class="col-md-3 pl-0">타이틀</strong>
+                                <div class="col"> <input type="text"></div>
+                            </li>
+                            <li class="py-2 py-lg-3 d-md-flex">
+                                <strong class="col-md-3 pl-0">타이틀</strong>
+                                <div class="col"> <input type="text"></div>
+                            </li>
+                            <li class="py-2 py-lg-3 d-md-flex">
+                                <strong class="col-md-3 pl-0">타이틀</strong>
+                                <div class="col"> <input type="text"></div>
+                            </li>
+
+                            <li class="py-2 py-lg-3 d-md-flex fmradio">
+                                <strong class="col-md-3 pl-0">성별</strong>
+                                <div class="col">
+                                    <input type="radio" id="man" name="mw" value="남자" class="d-none">
+                                    <label for="man">
+                                        <i class="xi-radiobox-blank"></i>
+                                        <span>남자</span>
+                                    </label>
+                                    
+                                    <input type="radio" name="mw" id="woman" value="여자" class="d-none">
+                                    <label for="woman">
+                                        <i class="xi-radiobox-blank"></i>
+                                        <span>여자</span>
+                                    </label>
+                                </div>
+                            </li>
+
+                            <li class="py-2 py-lg-3 d-md-flex chbox">
+                                <strong class="col-md-3 pl-0">훈련언어</strong>
+                                <div class="col pr-0">
+                                    <input type="checkbox" name="ck1" id="ck1">
+                                    <label for="ck1">
+                                        <i class="xi-checkbox-blank"></i>
+                                        <span>php</span>
+                                    </label><input type="checkbox" name="ck2" id="ck2">
+                                    <label for="ck2">
+                                        <i class="xi-checkbox-blank"></i>
+                                        <span>javascript</span>
+                                    </label>
+                                    <input type="checkbox" name="ck3" id="ck3">
+                                    <label for="ck3">
+                                        <i class="xi-checkbox-blank"></i>
+                                        <span>java</span>
+                                    </label>
+                                    <input type="checkbox" name="ck4" id="ck4">
+                                    <label for="ck4">
+                                        <i class="xi-checkbox-blank"></i>
+                                        <span>scss</span>
+                                    </label>
+                                    <input type="checkbox" name="ck5" id="ck5">
+                                    <label for="ck5">
+                                        <i class="xi-checkbox-blank"></i>
+                                        <span>react</span>
+                                    </label>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <p class="agree d-flex justify-content-between">
+                            <input type="checkbox" id="agree" class="d-none">
+                            <label for="agree">
+                                <i class="xi-checkbox-blank"></i>
+                                <span role="button">개인정보정책동의</span>
+                            </label>
+                            <a href="#agreePop">동의</a>
+                        </p>
+                        <p class="text-right">
+                            <input type="submit" value="보내기"></input>
+                        </p>
+
+                    </div>
+                </form>
+            </div>
+        </section>
+        <div id="agreePop">
+            <h3>약관</h3>
+            <div class="content"></div>
+            <button>닫기</button>
+        </div>
 
         <footer id="ft" class="">
             나의 대외적인 정보 (전화번호/이메일/카카오톡 등)

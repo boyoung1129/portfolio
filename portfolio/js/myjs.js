@@ -51,7 +51,41 @@ $(document).ready(function(){
             clicka.addClass('act');
         })
     })
+
 })
+
+
+$(document).ready(function(){
+
+    var _win = $(window); //객체저장
+    var scrollPos = ''; //스크롤 수치 저장할 변수
+
+    _win.on('scroll',function(){
+
+        scrollPos = _win.scrollTop(); //스크롤 할때마다 위치를 저장해라
+        console.log(scrollPos)
+
+        $('.navisection').each(function(){
+        })
+    }) //// scroll
+
+    $('#fm [type="submit"]').on('click sumbit',function(){
+        // alert('클릭되나')
+
+        if($('#agree').prop("checked") == true){
+            return true
+        }else{
+            alert("개인정보정책 동의해주세요.")
+            return false
+        }
+
+               
+    })
+
+})
+
+
+
 
 
 // function을 불러온 주어가 그 실행문의 this가 됨

@@ -68,3 +68,40 @@ li {list-style: none;}
     background-color: #f30c51 !important;
     color: #fff !important;
 }
+
+.req:before {
+    content: "*";
+    color: #f30c51;
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+#fm li strong:before{
+    content: "*";
+    color: transparent;
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+#fm li input[type='text']:focus + span{
+    display: block !important;
+}
+
+.fmradio input + label i,
+.chbox input + label i,
+.agree input + label i {
+    color: #707070;
+}
+.fmradio input:checked + label i::before {
+    content: "\e9c7";
+    color: #f30c51;
+}
+.chbox input {
+    display: none;
+}
+
+.chbox input:checked + label i::before,
+.agree input:checked + label i::before  {
+    content: "\e92e";
+    color: #f30c51;
+}

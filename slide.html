@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html, append, prepend</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        li{ list-style: none;}
+
+        .m-auto{ margin: 0 auto;}
+        .w1200{ width: 1200px;}
+        .h300{ height: 300px;}
+        .ofh{overflow: hidden;}
+        .d-flex{ display: flex;}
+        
+        .red{ background-color: red;}
+        .green{ background-color: green;}
+        .blue{ background-color: blue;}
+
+        .anitarget{ width: calc(100% * 3) }
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){          
+
+            $('#btns button').click(function(){
+
+                $('#slideBox ul').animate({
+                    "marginLeft" : -1200 * $(this).index()
+                },400,function(){})
+            })
+        })
+    </script>   
+</head>
+<body>
+        <!-- 스와이퍼플러그 구조 동일 -->
+        <div id="btns" class="w1200 m-auto ">
+            <button>레드배경이 보인다.</button>
+            <button>초록배경이 보인다.</button>
+            <button>블루배경이 보인다.</button>
+        </div>
+        <div class="w1200 h300 ofh m-auto" id="slideBox">
+            <ul class="anitarget d-flex">
+                <li class="w1200 h300 red"></li>
+                <li class="w1200 h300 green"></li>
+                <li class="w1200 h300 blue"></li>
+            </ul>
+        </div> 
+
+        section#mainBanner
+          div#M_Banner01
+            p
+            div.rel > h2 + div.abs > img.textBubble > p
+            p
+            a
+        
+<section id="mainBanner">
+    <div id="M_Banner01">
+        <p>요즘 대세 클린식단</p>
+        <div class="rel">
+            <h2>룩트 그릭요거트 정기구독</h2>
+            <div class="abs">
+                <img src="" alt="말풍선이미지" class="textBubble">
+                    <p>지금 신청하면<br> 첫 달 구독료 무료</p>
+                </img>
+            </div>
+            <p>하루 한 끼 건강하고 맛있게 챙겨보세요</p>
+            <a href="#">정기구독 신청하기</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
